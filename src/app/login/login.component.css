@@ -135,6 +135,12 @@
   outline: none;
 }
 
+.Login_Registro form button:disabled {
+
+  background: #23292e2e;
+
+}
+
 
 
 /*Para que se muestre y desaparezcan los formularios que estoy solicitando*/

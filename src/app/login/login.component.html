@@ -7,50 +7,48 @@
         <div class="login">
           <h3>¿Tienes una cuenta activa?</h3>
           <p>Inicia sesión para entrar a la página</p>
-          <button id="btn_login">Iniciar Sesión</button>
+          <button id="btn_login" (click)="cambioAInciarSesion()">Iniciar Sesión</button>
         </div>
-  
+
         <div class="registro">
           <h3>¿Aún no tienes una cuenta?</h3>
           <p>Regístrate para que puedas iniciar sesión</p>
-          <button id="btn_registrarse">Regístrarse</button>
+          <button id="btn_registrarse" (click)="cambioARegistro()">Regístrarse</button>
         </div>
       </div>
-  
       <!--Formulario de Login y registro, estos cambiaran dependiendo del boton que se aprima-->
       <div class="Login_Registro">
         <!--Login-->
-        <form action="" class="FormularioLogin" id="Ingreso">
+        <form [formGroup]="formLogin" (submit)="login()" class="FormularioLogin">
           <h2>Iniciar Sesión</h2>
           <input type="hidden" id="rol" name="rol" />
-          <input type="email" placeholder="Correo Electronico" id="email" name="email" />
-          <input type="password" placeholder="Contraseña" id="Password" name="Password" />
-          <button type="submit">Iniciar sesión</button>
+          <input type="email" placeholder="Correo Electronico" formControlName="correoElectronico"/>
+          <input type="password" placeholder="Contraseña" formControlName="password" />
+          <button [disabled]="formLogin.invalid">Iniciar sesión</button>
         </form>
-  
+
+
         <!--Registro-->
-        <form action="" class="FormularioRegistro" id="RegistroUsuario">
+        <form [formGroup]="formRegistro" (submit)="registrarUsuario()" class="FormularioRegistro">
           <h2>Regístrarse</h2>
-          <input type="email" placeholder="Correo Electronico" id="email" />
-          <input type="password" placeholder="Contraseña" id="Password" />
-          <input type="password" placeholder="Repita su Contraseña" id="Password2" />
+          <input placeholder="Correo Electronico" formControlName="correoElectronico" />
+          <input type="password" placeholder="Contraseña" formControlName="password" />
+          <input type="password" placeholder="Repita su Contraseña" formControlName="password2" />
           <fieldset>
             <legend>Como deseas Registrarte?</legend>
             <label>
-              <input type="radio" name="radio-button" value="css" checked />
+              <input type="radio" name="radio-button" value="Estudiante" checked="true"  formControlName="rol"/>
               <span>Estudiante</span>
             </label>
             <label>
-              <input type="radio" name="radio-button" value="no" />
+              <input type="radio" name="radio-button" value="Profesor" formControlName="rol"/>
               <span>Profesor</span>
             </label>
           </fieldset>
-  
-          <button type="submit">Regístrarse</button>
+
+          <button [disabled]="formRegistro.invalid">Regístrarse</button>
         </form>
       </div>
     </div>
   </div>
 </div>
-
-<script src="assets/scripts/login.js"></script>
