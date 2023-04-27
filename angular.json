@@ -27,7 +27,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": ["src/assets/scripts/login.js"]
+            "scripts": []
           },
           "configurations": {
             "production": {

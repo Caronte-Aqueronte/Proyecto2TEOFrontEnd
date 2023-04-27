@@ -1,5 +1,6 @@
 
 //Classe para realizar la transcion de Inicio Sesion o Registrarse 
+
 document.getElementById("btn_registrarse").addEventListener("click", registrar);
 document.getElementById("btn_login").addEventListener("click", inicioSesion);
 
