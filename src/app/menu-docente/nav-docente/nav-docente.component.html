@@ -1,29 +1,69 @@
-<div class="body">
-    <div class="nav">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" >Inicio</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" >Regresar</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" >Crear Nuevo Juego</a>
-          </li>
-        </ul>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink=""></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <div class="dropdown">
+          <button
+            class="btn btn-primary"
+            type="button"
+            id="MenuJuegos"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Crear Juego
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+            <li><a class="dropdown-item" href="#">Juego Ahorcado</a></li>
+            <li><a class="dropdown-item" href="#">Juego Ordena Palabras</a></li>
+            <li><a class="dropdown-item" href="#">Juego Quizz</a></li>
+          </ul>
+        </div>
+
+        <div class="dropdown">
+          <button
+            class="btn btn-primary"
+            type="button"
+            id="MenuJuegos"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Juego Basta
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Crear Nuevo Juego</a></li>
+            <li><a class="dropdown-item" href="#">Calificar Juego</a></li>
+            <li><a class="dropdown-item" href="#">Ver Juegos </a></li>
+          </ul>
+        </div>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/Rankings">Ver Rankings</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Buscar"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-info" type="submit">Buscar</button>
+      </form>
     </div>
   </div>
+</nav>
