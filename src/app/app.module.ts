@@ -9,13 +9,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuDocenteComponent } from './menu-docente/menu-docente/menu-docente.component';
 import { NavDocenteComponent } from './menu-docente/nav-docente/nav-docente.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MenuEstudianteComponent } from './menu-estudiante/menu-estudiante/menu-estudiante.component';
+import { NavEstudianteComponent } from './menu-estudiante/nav-estudiante/nav-estudiante.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     MenuDocenteComponent,
-    NavDocenteComponent
+    NavDocenteComponent,
+    MenuEstudianteComponent,
+    NavEstudianteComponent,
   ],
   imports: [
     BrowserModule,

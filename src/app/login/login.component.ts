@@ -83,13 +83,13 @@ export class LoginComponent implements OnInit {
     this.banderaErrorLogin = false;
 
     //utilizar el servicio para la creacion de un usuario
-    this.usuarioService.login(this.formRegistro.value).subscribe((r) => {
+    this.usuarioService.login(this.formLogin.value).subscribe((r) => {
       if (r.estado) {
        
         if(r.respuesta.rol == "Profesor"){
           this.router.navigate(['/menu-docente']);
         }else if(r.respuesta.rol == "Estudiante"){
-
+          this.router.navigate(['/menu-estudiante']);
         }
       } else {
         this.banderaErrorLogin = true;
