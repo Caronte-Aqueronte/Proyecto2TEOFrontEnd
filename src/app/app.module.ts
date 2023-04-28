@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuDocenteComponent } from './menu-docente/menu-docente/menu-docente.component';
 import { NavDocenteComponent } from './menu-docente/nav-docente/nav-docente.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NavDocenteComponent } from './menu-docente/nav-docente/nav-docente.comp
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

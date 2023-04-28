@@ -22,14 +22,14 @@
         <form [formGroup]="formLogin" (submit)="login()" class="FormularioLogin">
           <h2>Iniciar Sesión</h2>
           <input type="hidden" id="rol" name="rol" />
-          <input type="email" placeholder="Correo Electronico" formControlName="correoElectronico"/>
+          <input type="email" placeholder="Correo Electronico" formControlName="correoElectronico" />
           <input type="password" placeholder="Contraseña" formControlName="password" />
           <button [disabled]="formLogin.invalid">Iniciar sesión</button>
         </form>
 
 
         <!--Registro-->
-        <form [formGroup]="formRegistro" (submit)="registrarUsuario()" class="FormularioRegistro">
+        <form [formGroup]="formRegistro" (submit)="crearUsuario()" class="FormularioRegistro">
           <h2>Regístrarse</h2>
           <input placeholder="Correo Electronico" formControlName="correoElectronico" />
           <input type="password" placeholder="Contraseña" formControlName="password" />
@@ -37,16 +37,24 @@
           <fieldset>
             <legend>Como deseas Registrarte?</legend>
             <label>
-              <input type="radio" name="radio-button" value="Estudiante" checked="true"  formControlName="rol"/>
+              <input type="radio" name="rol" value="Estudiante" checked="true" formControlName="rol" />
               <span>Estudiante</span>
             </label>
             <label>
-              <input type="radio" name="radio-button" value="Profesor" formControlName="rol"/>
+              <input type="radio" name="rol" value="Profesor" formControlName="rol" />
               <span>Profesor</span>
             </label>
           </fieldset>
 
           <button [disabled]="formRegistro.invalid">Regístrarse</button>
+
+          <br>
+          <div class="alert alert-success alerta" [hidden]="!banderaAciertoCreate" role="alert">
+            {{mensajeCreate}}
+          </div>
+          <div class="alert alert-danger alerta" [hidden]="!banderaErrorCreate" role="alert">
+            {{mensajeCreate}}
+          </div>
         </form>
       </div>
     </div>

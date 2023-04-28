@@ -190,3 +190,8 @@ label>input[type="radio"]+* {
   display: inline-block;
   padding: 0.5rem 1rem;
 }
+
+.alerta{
+  margin-top: 10px;
+  padding: 5px;
+}
