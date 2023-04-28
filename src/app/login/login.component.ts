@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UsuarioService } from '../servicios/usuario.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +23,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private usuarioService: UsuarioService
+    private usuarioService: UsuarioService,
+    private router: Router
   ) {
     this.formLogin = this.formBuilder.group({
       correoElectronico: [
@@ -75,7 +77,27 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  public login(): void {}
+  public login(): void {
+    //volver banderas de confirmacion a false
+    this.banderaAcietoLogin = false;
+    this.banderaErrorLogin = false;
+
+    //utilizar el servicio para la creacion de un usuario
+    this.usuarioService.login(this.formRegistro.value).subscribe((r) => {
+      if (r.estado) {
+       
+        if(r.respuesta.rol == "Profesor"){
+          this.router.navigate(['/menu-docente']);
+        }else if(r.respuesta.rol == "Estudiante"){
+
+        }
+      } else {
+        this.banderaErrorLogin = true;
+      }
+
+      this.mensajeLogin = r.respuesta;
+    });
+  }
 
   public crearUsuario(): void {
     //volver banderas de confirmacion a false
