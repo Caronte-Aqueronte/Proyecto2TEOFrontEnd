@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-docente',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class NavDocenteComponent {
 
+  constructor(private router:Router){
+
+  }
 }

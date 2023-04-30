@@ -11,6 +11,8 @@ import { NavDocenteComponent } from './menu-docente/nav-docente/nav-docente.comp
 import { HttpClientModule } from '@angular/common/http';
 import { MenuEstudianteComponent } from './menu-estudiante/menu-estudiante/menu-estudiante.component';
 import { NavEstudianteComponent } from './menu-estudiante/nav-estudiante/nav-estudiante.component';
+import { OrdenaPalabraPageComponent } from './menu-docente/juego-ordena-palabra/ordena-palabra-page/ordena-palabra-page.component';
+import { PalabraContainerComponent } from './menu-docente/juego-ordena-palabra/palabra-container/palabra-container.component';
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import { NavEstudianteComponent } from './menu-estudiante/nav-estudiante/nav-est
     NavDocenteComponent,
     MenuEstudianteComponent,
     NavEstudianteComponent,
+    OrdenaPalabraPageComponent,
+    PalabraContainerComponent,
   ],
   imports: [
     BrowserModule,
