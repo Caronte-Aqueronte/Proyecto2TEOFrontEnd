@@ -18,7 +18,9 @@ import { JuegosContainerComponent } from './menu-estudiante/juegos-container/jue
 import { JuegosCardComponent } from './menu-estudiante/juegos-card/juegos-card.component';
 import { JuegoPerfilComponent } from './menu-estudiante/juego-perfil/juego-perfil.component';
 import { MatTableModule } from '@angular/material/table' 
-import { MatFormFieldModule} from '@angular/material/form-field' 
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ComentarioCardComponent } from './menu-estudiante/comentario-card/comentario-card.component' 
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { MatFormFieldModule} from '@angular/material/form-field'
     JuegosContainerComponent,
     JuegosCardComponent,
     JuegoPerfilComponent,
+    ComentarioCardComponent,
     
   ],
   imports: [
@@ -46,7 +49,8 @@ import { MatFormFieldModule} from '@angular/material/form-field'
 
     
     MatTableModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    BrowserAnimationsModule
 
   ],
   providers: [CookieService],

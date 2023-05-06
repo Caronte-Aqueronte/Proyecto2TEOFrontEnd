@@ -13,4 +13,10 @@ export class JuegoServiceService {
   public mostrarJuegos(): Observable<any> {
     return this.http.get<Observable<any>>(this.url + '/mostrarJuegos');
   }
+
+  public buscarJuegoPorId(id: any): Observable<any> {
+    return this.http.get<Observable<any>>(
+      this.url + `/buscarJuegoPorId?id=${id}`
+    );
+  }
 }
