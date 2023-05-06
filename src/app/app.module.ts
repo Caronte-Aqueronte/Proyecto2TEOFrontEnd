@@ -13,7 +13,12 @@ import { MenuEstudianteComponent } from './menu-estudiante/menu-estudiante/menu-
 import { NavEstudianteComponent } from './menu-estudiante/nav-estudiante/nav-estudiante.component';
 import { OrdenaPalabraPageComponent } from './menu-docente/juego-ordena-palabra/ordena-palabra-page/ordena-palabra-page.component';
 import { PalabraContainerComponent } from './menu-docente/juego-ordena-palabra/palabra-container/palabra-container.component';
-
+import {CookieService} from 'ngx-cookie-service';
+import { JuegosContainerComponent } from './menu-estudiante/juegos-container/juegos-container.component';
+import { JuegosCardComponent } from './menu-estudiante/juegos-card/juegos-card.component';
+import { JuegoPerfilComponent } from './menu-estudiante/juego-perfil/juego-perfil.component';
+import { MatTableModule } from '@angular/material/table' 
+import { MatFormFieldModule} from '@angular/material/form-field' 
 
 @NgModule({
   declarations: [
@@ -25,6 +30,10 @@ import { PalabraContainerComponent } from './menu-docente/juego-ordena-palabra/p
     NavEstudianteComponent,
     OrdenaPalabraPageComponent,
     PalabraContainerComponent,
+    JuegosContainerComponent,
+    JuegosCardComponent,
+    JuegoPerfilComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -32,9 +41,15 @@ import { PalabraContainerComponent } from './menu-docente/juego-ordena-palabra/p
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+ 
+
+    
+    MatTableModule,
+    MatFormFieldModule
+
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

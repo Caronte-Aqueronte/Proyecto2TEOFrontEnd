@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UsuarioService } from '../servicios/usuario.service';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-login',
@@ -24,7 +25,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private usuarioService: UsuarioService,
-    private router: Router
+    private router: Router,
+    private cookiesService: CookieService
   ) {
     this.formLogin = this.formBuilder.group({
       correoElectronico: [
@@ -85,11 +87,12 @@ export class LoginComponent implements OnInit {
     //utilizar el servicio para la creacion de un usuario
     this.usuarioService.login(this.formLogin.value).subscribe((r) => {
       if (r.estado) {
-       
-        if(r.respuesta.rol == "Profesor"){
+        let usuario = this.formLogin.controls['correoElectronico'].value;
+        this.cookiesService.set('usuario', usuario);
+        if (r.respuesta.rol == 'Profesor') {
           this.router.navigate(['/menu-docente']);
-        }else if(r.respuesta.rol == "Estudiante"){
-          this.router.navigate(['/menu-estudiante']);
+        } else if (r.respuesta.rol == 'Estudiante') {
+          this.router.navigate(['/menu-estudiante/juegos']);
         }
       } else {
         this.banderaErrorLogin = true;

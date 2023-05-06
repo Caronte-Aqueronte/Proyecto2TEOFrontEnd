@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { MenuDocenteComponent } from './menu-docente/menu-docente/menu-docente.component';
 import { MenuEstudianteComponent } from './menu-estudiante/menu-estudiante/menu-estudiante.component';
 import { OrdenaPalabraPageComponent } from './menu-docente/juego-ordena-palabra/ordena-palabra-page/ordena-palabra-page.component';
+import { JuegosContainerComponent } from './menu-estudiante/juegos-container/juegos-container.component';
+import { JuegoPerfilComponent } from './menu-estudiante/juego-perfil/juego-perfil.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login' },
@@ -14,15 +16,24 @@ const routes: Routes = [
     component: MenuDocenteComponent,
     children: [
       {
-        path:'crear-ordena-palabra',
-        component: OrdenaPalabraPageComponent
-      }
+        path: 'crear-ordena-palabra',
+        component: OrdenaPalabraPageComponent,
+      },
     ],
   },
   {
     path: 'menu-estudiante',
     component: MenuEstudianteComponent,
-    children: [],
+    children: [
+      {
+        path: 'juegos',
+        component: JuegosContainerComponent,
+      },
+      {
+        path: 'juegos-perfil/:id',
+        component: JuegoPerfilComponent,
+      },
+    ],
   },
 ];
 

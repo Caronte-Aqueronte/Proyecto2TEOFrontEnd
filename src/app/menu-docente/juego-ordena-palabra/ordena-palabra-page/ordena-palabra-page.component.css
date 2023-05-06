@@ -2,6 +2,25 @@
     --colorTextos: #49454567;
 }
 
+.general-container {
+    min-height: 100%;
+    min-width: 100%;
+    font-family: 'Roboto';
+    background: #4568DC;
+    background: -webkit-linear-gradient(to right, #43d6a5, #4568DC);
+    background: linear-gradient(to right, #43d6a5, #4568DC);
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.palabras-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 *,
 ::before,
@@ -11,12 +30,7 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Roboto';
-    background: #4568DC;
-    background: -webkit-linear-gradient(to right, #43d6a5, #4568DC);
-    background: linear-gradient(to right, #43d6a5, #4568DC);
-    height: 650px;
+.body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +41,7 @@ h1 {
     font-weight: 700;
 }
 
-form {
+.form2 {
     background: #fff;
     padding: 40px 0;
     box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
@@ -39,7 +53,7 @@ form {
     margin: auto;
 }
 
-form .grupo {
+.form2 .grupo {
     position: relative;
     margin: 45px;
 }
@@ -94,7 +108,7 @@ input:valid~label {
     left: 0;
 }
 
-input:focus~.barra::before {
+.input:focus~.barra::before {
     width: 100%;
 }
 

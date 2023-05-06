@@ -1,40 +1,32 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ordenar Palabra</title>
-    <link rel="stylesheet" href="ordena-palabra-page.component.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <form action="" method="POST" id="form">
+<div class="general-container">
+  <div class="body">
+    <form [formGroup]="formIngresarPalabra" (submit)="guardarPalabra()" class="form2" id="form">
       <div class="form">
-        <h1>Ordenar Palabra</h1>
+        <h1>Crear Palabra</h1>
         <div class="grupo">
-          <input type="text" name="" id="palabra" required /><span
-            class="barra"
-          ></span>
-          <label for="">Palabra</label>
+          <input class="input" type="text" name="" id="palabra" formControlName="nombreJuego" /><span
+            class="barra"></span>
+          <label class="label" for="">Nombre del juego</label>
         </div>
         <div class="grupo">
-          <input type="text" name="" id="pista" required /><span
-            class="barra"
-          ></span>
-          <label for="">Pista</label>
+          <input class="input" type="text" name="" id="palabra" formControlName="palabra" /><span class="barra"></span>
+          <label class="label" for="">Palabra</label>
+        </div>
+        <div class="grupo">
+          <input class="input" type="text" name="" id="pista" formControlName="pista" /><span class="barra"></span>
+          <label for="" class="label">Pista</label>
         </div>
 
-        <button type="submit">Ingresar Palabra</button>
+        <button [disabled]="formIngresarPalabra.invalid">Ingresar Palabra</button>
+        <button (click)="crearJuegoOrdenaPalabra()" type="button">Crear juego</button>
       </div>
     </form>
-    <!-- Estapacio entre el container de ordenar palabra y palabra container --> 
-    &nbsp;
-    &nbsp;
-    &nbsp;
-    <!---Agrego componente de palabra container -->
-    <app-palabra-container></app-palabra-container>
-  </body>
-</html>
+  </div>
+
+  <!---Agrego componente de palabra container -->
+  <div class="palabras-container">
+    <app-palabra-container *ngFor="let palabra of palabras; let i = index" [palabra]="palabra" [id]="i"
+      (notificar)="eliminarPalabra(i)">
+    </app-palabra-container>
+  </div>
+</div>
