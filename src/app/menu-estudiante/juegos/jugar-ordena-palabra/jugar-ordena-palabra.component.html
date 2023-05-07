@@ -1,0 +1,19 @@
+<div class="container" *ngIf="palabras && datosJuego">
+    <div class="title-button-container">
+        <h2>{{datosJuego.nombre}}</h2>
+        <button type="button" class="btn btn-success" (click)="terminarIntento()">Terminar intento</button>
+    </div>
+
+    <!--Div contenedor de las preguntas-->
+    <div *ngFor="let palabra of palabras; let i = index" class="card">
+        <p> <span>{{i+1}}. </span> <span> Palabra:</span>
+            {{palabra.palabraDesordenada}} <span>Pista:</span> {{palabra.pista}}
+        </p>
+        <div class="form__group field">
+            <!--Creamos un id dinamico segun el array de palabras enviadas-->
+            <input id="input{{i}}" type="input" class="form__field" placeholder="xx" required="">
+            <label for="name" class="form__label">Palabra ordenada</label>
+        </div>
+
+    </div>
+</div>

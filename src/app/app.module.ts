@@ -20,7 +20,9 @@ import { JuegoPerfilComponent } from './menu-estudiante/juego-perfil/juego-perfi
 import { MatTableModule } from '@angular/material/table' 
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ComentarioCardComponent } from './menu-estudiante/comentario-card/comentario-card.component' 
+import { ComentarioCardComponent } from './menu-estudiante/comentario-card/comentario-card.component';
+import { JugarOrdenaPalabraComponent } from './menu-estudiante/juegos/jugar-ordena-palabra/jugar-ordena-palabra.component';
+import { JugarAhorcadoComponent } from './menu-estudiante/juegos/jugar-ahorcado/jugar-ahorcado.component' 
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { ComentarioCardComponent } from './menu-estudiante/comentario-card/comen
     JuegosCardComponent,
     JuegoPerfilComponent,
     ComentarioCardComponent,
+    JugarOrdenaPalabraComponent,
+    JugarAhorcadoComponent,
     
   ],
   imports: [

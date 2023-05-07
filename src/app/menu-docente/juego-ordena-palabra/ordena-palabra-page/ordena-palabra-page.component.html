@@ -3,20 +3,18 @@
     <form [formGroup]="formIngresarPalabra" (submit)="guardarPalabra()" class="form2" id="form">
       <div class="form">
         <h1>Crear Palabra</h1>
-        <div class="grupo">
-          <input class="input" type="text" name="" id="palabra" formControlName="nombreJuego" /><span
-            class="barra"></span>
-          <label class="label" for="">Nombre del juego</label>
+        <div class="form__group field">
+          <input type="input" class="form__field" placeholder="Name" formControlName="nombreJuego">
+          <label for="name" class="form__label">Nombre del juego</label>
         </div>
-        <div class="grupo">
-          <input class="input" type="text" name="" id="palabra" formControlName="palabra" /><span class="barra"></span>
-          <label class="label" for="">Palabra</label>
+        <div class="form__group field">
+          <input type="input" class="form__field" placeholder="Name" formControlName="palabra">
+          <label for="name" class="form__label">Palabra</label>
         </div>
-        <div class="grupo">
-          <input class="input" type="text" name="" id="pista" formControlName="pista" /><span class="barra"></span>
-          <label for="" class="label">Pista</label>
+        <div class="form__group field">
+          <input type="input" class="form__field" placeholder="Name" formControlName="pista">
+          <label for="name" class="form__label">Pista</label>
         </div>
-
         <button [disabled]="formIngresarPalabra.invalid">Ingresar Palabra</button>
         <button (click)="crearJuegoOrdenaPalabra()" type="button">Crear juego</button>
       </div>

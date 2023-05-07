@@ -7,6 +7,7 @@ import { MenuEstudianteComponent } from './menu-estudiante/menu-estudiante/menu-
 import { OrdenaPalabraPageComponent } from './menu-docente/juego-ordena-palabra/ordena-palabra-page/ordena-palabra-page.component';
 import { JuegosContainerComponent } from './menu-estudiante/juegos-container/juegos-container.component';
 import { JuegoPerfilComponent } from './menu-estudiante/juego-perfil/juego-perfil.component';
+import { JugarOrdenaPalabraComponent } from './menu-estudiante/juegos/jugar-ordena-palabra/jugar-ordena-palabra.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login' },
@@ -32,6 +33,10 @@ const routes: Routes = [
       {
         path: 'juegos-perfil/:id',
         component: JuegoPerfilComponent,
+      },
+      {
+        path: 'jugar-ordena-palabra/:id',
+        component: JugarOrdenaPalabraComponent,
       },
     ],
   },

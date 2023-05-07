@@ -53,65 +53,73 @@ h1 {
     margin: auto;
 }
 
-.form2 .grupo {
+.form2 .form__group  {
     position: relative;
-    margin: 45px;
+    margin: 30px;
 }
 
-input {
-    background: none;
-    color: #c6c6c6;
-    font-size: 18px;
-    padding: 10px 10px 10px 5px;
-    display: block;
+.form__group {
+    position: relative;
+    padding: 20px 0 0;
+    width: 100%;
+    max-width: 180px;
+}
+
+.form__field {
+    font-family: inherit;
     width: 100%;
     border: none;
-    border-bottom: 1px solid var(--colorTextos);
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 17px;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
 }
 
-input:focus {
-    outline: none;
-    color: #5e5d5d;
+.form__field::placeholder {
+    color: transparent;
 }
 
-label {
-    color: var(--colorTextos);
-    font-size: 16px;
+.form__field:placeholder-shown~.form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label {
     position: absolute;
-    left: 5px;
-    top: 10px;
-    transition: 0.5s ease all;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #9b9b9b;
     pointer-events: none;
 }
 
-input:focus~label,
-input:valid~label {
-    top: -14px;
-    font-size: 12px;
-    color: #2196f3;
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #116399, #38caef);
+    border-image-slice: 1;
 }
 
-.barra {
-    position: relative;
-    display: block;
-    width: 100%;
-}
-
-.barra::before {
-    content: "";
-    height: 2px;
-    width: 0%;
-    bottom: 0;
+.form__field:focus~.form__label {
     position: absolute;
-    background: linear-gradient(to right, #43d6a5, #4568DC);
-    transition: 0.3s ease width;
-    left: 0;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #38caef;
+    font-weight: 700;
 }
 
-.input:focus~.barra::before {
-    width: 100%;
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+    box-shadow: none;
 }
-
 
 button {
     font-family: 'roboto';

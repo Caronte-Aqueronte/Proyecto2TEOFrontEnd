@@ -1,29 +1,11 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { ComentarioService } from 'src/app/servicios/comentario.service';
 import { JuegoServiceService } from 'src/app/servicios/juego-service.service';
+import { PunteoService } from 'src/app/servicios/punteo.service';
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-  { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-  { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-  { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-  { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-  { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-  { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-  { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-  { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-  { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-];
 
 @Component({
   selector: 'app-juego-perfil',
@@ -37,19 +19,22 @@ export class JuegoPerfilComponent {
 
   public formComentario: FormGroup; //formulario de comentarios
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  displayedColumns: string[] = ['position', 'name', 'weight'];
+  dataSource = [];
 
   constructor(
     private rutaActiva: ActivatedRoute,
     private juegoService: JuegoServiceService,
     private comentarioService: ComentarioService,
+    private punteoService: PunteoService,
     private cookiesService: CookieService,
+    private router: Router,
     private formBuilder: FormBuilder
   ) {
     this.id = this.rutaActiva.snapshot.params['id']; //obtenemos el id del juego ha mostrar
     this.traerJuegoPorId();
     this.traerComentariosDeJuego();
+    this.traerRankingDeUnJuego();
     //se dan validaciones a los campos de crear un comentario
     this.formComentario = this.formBuilder.group({
       comentario: ['', [Validators.required, Validators.minLength(1)]],
@@ -92,10 +77,30 @@ export class JuegoPerfilComponent {
   public traerComentariosDeJuego(): void {
     this.comentarioService.traerComentariosDeJuego(this.id).subscribe((r) => {
       if (r) {
-        console.log(r);
         //vemos si la respuesta no es nula
         this.comentarios = r;
       }
+    });
+  }
+
+  /**
+   * Redirige a la pagina de juego del juego
+   */
+  public toJugar(): void {
+    switch (this.juego.tipo) {
+      case 'Ordena palabra':
+        this.router.navigate([
+          `/menu-estudiante/jugar-ordena-palabra/${this.id}`,
+        ]);
+
+        break;
+    }
+  }
+
+  public traerRankingDeUnJuego(): void {
+    this.punteoService.traerRankingDeUnJuego(this.id).subscribe((r) => {
+      this.dataSource = r.ranking;
+      console.log(r);
     });
   }
 }
