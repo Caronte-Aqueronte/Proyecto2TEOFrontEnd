@@ -1,1 +1,28 @@
-<p>jugar-ahorcado works!</p>
+<div class="container" *ngIf="datosJuego">
+    <div class="title-button-container">
+        <h2>{{datosJuego.nombre}}</h2>
+        <app-cronometro (salida)="setCronometro($event)"></app-cronometro>
+    </div>
+
+    <div class="ahorcado-container">
+        <img src="../../../../assets/img/ahorcado{{errores}}.png">
+
+        <p><span>Pista</span> {{pista}} </p>
+
+        <div class="field-container">
+            <app-ahorcado-field *ngFor="let palabra of palabraDeconstruida" [palabra]="palabra"></app-ahorcado-field>
+        </div>
+
+        <div class="input-button-container">
+            <div class="form">
+                <input class="input" placeholder="Ingresa una letra" required="" type="text" id="letra">
+                <span class="input-border"></span>
+            </div>
+            <button class="btn btn-success" (click)="probarLetra()">Probar letra</button>
+        </div>
+
+    </div>
+
+
+
+</div>

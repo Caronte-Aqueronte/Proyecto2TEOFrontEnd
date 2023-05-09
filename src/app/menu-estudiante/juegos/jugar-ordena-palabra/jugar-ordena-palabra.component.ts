@@ -13,6 +13,9 @@ export class JugarOrdenaPalabraComponent {
   public id: any; //id del juego
   public datosJuego: any; //datos del juego
   public palabras: Array<any>;
+
+  public cronometro: any;
+
   constructor(
     private juegoService: JuegoServiceService,
     private juegoOrdenaPalabraService: JuegoOrdenaPalabraService,
@@ -57,6 +60,7 @@ export class JugarOrdenaPalabraComponent {
     }
     //una vez con el array lleno podemos crear un ibjeto con el id de juego y lasr respuestas recabadas
     let body = new Object({
+      tiempo:this.cronometro,
       jugador: this.cookiesService.get('usuario'),
       id: this.id,
       respuestas: palabrasIntento,
@@ -73,9 +77,18 @@ export class JugarOrdenaPalabraComponent {
 
         alert('Tu punteo fue de ' + r.punteo);
 
-        this.router.navigate([//navegamos al perfil del juego para que se puedan visualizar de nuevo los comentarios y records
+        this.router.navigate([
+          //navegamos al perfil del juego para que se puedan visualizar de nuevo los comentarios y records
           `menu-estudiante/juegos-perfil/${this.id}`,
         ]);
       });
+  }
+
+  /**
+   * Recibe la actualizacion de los segundos que el cronometro esta calculando
+   * @param milis
+   */
+  public setCronometro(milis: any): void {
+    this.cronometro = milis;
   }
 }

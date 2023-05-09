@@ -6,7 +6,6 @@ import { ComentarioService } from 'src/app/servicios/comentario.service';
 import { JuegoServiceService } from 'src/app/servicios/juego-service.service';
 import { PunteoService } from 'src/app/servicios/punteo.service';
 
-
 @Component({
   selector: 'app-juego-perfil',
   templateUrl: './juego-perfil.component.html',
@@ -19,7 +18,7 @@ export class JuegoPerfilComponent {
 
   public formComentario: FormGroup; //formulario de comentarios
 
-  displayedColumns: string[] = ['position', 'name', 'weight'];
+  displayedColumns: string[] = ['position', 'name', 'tiempo', 'weight'];
   dataSource = [];
 
   constructor(
@@ -94,13 +93,15 @@ export class JuegoPerfilComponent {
         ]);
 
         break;
+      case 'Ahorcado':
+        this.router.navigate([`/menu-estudiante/jugar-ahorcado/${this.id}`]);
+        break;
     }
   }
 
   public traerRankingDeUnJuego(): void {
     this.punteoService.traerRankingDeUnJuego(this.id).subscribe((r) => {
       this.dataSource = r.ranking;
-      console.log(r);
     });
   }
 }

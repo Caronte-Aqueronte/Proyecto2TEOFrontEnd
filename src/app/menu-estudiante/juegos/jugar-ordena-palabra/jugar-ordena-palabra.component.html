@@ -1,6 +1,7 @@
 <div class="container" *ngIf="palabras && datosJuego">
     <div class="title-button-container">
         <h2>{{datosJuego.nombre}}</h2>
+        <app-cronometro (salida)="setCronometro($event)"></app-cronometro>
         <button type="button" class="btn btn-success" (click)="terminarIntento()">Terminar intento</button>
     </div>
 

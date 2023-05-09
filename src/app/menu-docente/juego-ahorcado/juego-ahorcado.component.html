@@ -1,0 +1,22 @@
+<div class="general-container">
+    <div class="body">
+      <form [formGroup]="formIngresarPalabra" (submit)="crearJuegoAhorcado()" class="form2" id="form">
+        <div class="form">
+          <h1>Crear Ahorcado</h1>
+          <div class="form__group field">
+            <input type="input" class="form__field" placeholder="Name" formControlName="nombreJuego">
+            <label for="name" class="form__label">Nombre del juego</label>
+          </div>
+          <div class="form__group field">
+            <input type="input" class="form__field" placeholder="Name" formControlName="palabra">
+            <label for="name" class="form__label">Palabra</label>
+          </div>
+          <div class="form__group field">
+            <input type="input" class="form__field" placeholder="Name" formControlName="pista">
+            <label for="name" class="form__label">Pista</label>
+          </div>
+          <button [disabled]="formIngresarPalabra.invalid">Ingresar Palabra</button>
+        </div>
+      </form>
+    </div>
+  </div>

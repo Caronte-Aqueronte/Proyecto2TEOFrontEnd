@@ -22,7 +22,10 @@ import { MatFormFieldModule} from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ComentarioCardComponent } from './menu-estudiante/comentario-card/comentario-card.component';
 import { JugarOrdenaPalabraComponent } from './menu-estudiante/juegos/jugar-ordena-palabra/jugar-ordena-palabra.component';
-import { JugarAhorcadoComponent } from './menu-estudiante/juegos/jugar-ahorcado/jugar-ahorcado.component' 
+import { JugarAhorcadoComponent } from './menu-estudiante/juegos/jugar-ahorcado/jugar-ahorcado.component';
+import { CronometroComponent } from './menu-estudiante/cronometro/cronometro.component';
+import { JuegoAhorcadoComponent } from './menu-docente/juego-ahorcado/juego-ahorcado.component';
+import { AhorcadoFieldComponent } from './menu-estudiante/juegos/ahorcado-field/ahorcado-field.component' 
 
 @NgModule({
   declarations: [
@@ -40,6 +43,9 @@ import { JugarAhorcadoComponent } from './menu-estudiante/juegos/jugar-ahorcado/
     ComentarioCardComponent,
     JugarOrdenaPalabraComponent,
     JugarAhorcadoComponent,
+    CronometroComponent,
+    JuegoAhorcadoComponent,
+    AhorcadoFieldComponent,
     
   ],
   imports: [
