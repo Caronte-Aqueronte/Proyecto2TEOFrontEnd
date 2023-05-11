@@ -53,8 +53,6 @@ export class JugarAhorcadoComponent {
       }
 
       this.pista = this.datosJuego.palabrasAhorcado[0].pista;
-
-      console.log(this.palabraDeconstruida);
     });
   }
 

@@ -1,0 +1,28 @@
+.card-container {
+    width: 220px;
+    height: 220px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 1px 3px 23px 0px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    transition: ease 1s;
+}
+
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+
+.flip-card-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to left, dodgerblue, rgb(106, 169, 231)) ;
+    color: white;
+   
+    transform: rotateY(-180deg);
+    width: 200px;
+    height: 200px;
+}

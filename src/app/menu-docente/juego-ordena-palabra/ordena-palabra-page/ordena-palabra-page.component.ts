@@ -35,7 +35,6 @@ export class OrdenaPalabraPageComponent {
   }
 
   public eliminarPalabra(event: any) {
-    console.log(event);
     this.palabras.splice(event, 1);
   }
 

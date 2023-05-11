@@ -1,0 +1,29 @@
+<div class="general-container">
+    <div class="body">
+        <form [formGroup]="formIngresarPareja" (submit)="ingresarPareja()" class="form2" id="form">
+            <div class="form">
+                <h1>Crear Memoria</h1>
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Name" formControlName="nombreJuego">
+                    <label for="name" class="form__label">Nombre del juego</label>
+                </div>
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Name" formControlName="pareja1">
+                    <label for="name" class="form__label">Pareja 1</label>
+                </div>
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Name" formControlName="pareja2">
+                    <label for="name" class="form__label">Pareja 2</label>
+                </div>
+                <button [disabled]="formIngresarPareja.invalid">Ingresar pareja</button>
+                <button (click)="crearJuegoMemoria()" type="button">Crear juego</button>
+            </div>
+        </form>
+    </div>
+
+    <!---Agrego componente de pareja container -->
+    <div class="palabras-container">
+        <app-par-card *ngFor="let pareja of parejas; let i = index"  [idPareja]="pareja.idPareja" [pareja]="pareja" (notificador)="eliminarPareja(i, $event)">
+        </app-par-card>
+    </div>
+</div>

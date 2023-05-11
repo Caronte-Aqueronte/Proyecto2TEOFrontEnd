@@ -25,7 +25,11 @@ import { JugarOrdenaPalabraComponent } from './menu-estudiante/juegos/jugar-orde
 import { JugarAhorcadoComponent } from './menu-estudiante/juegos/jugar-ahorcado/jugar-ahorcado.component';
 import { CronometroComponent } from './menu-estudiante/cronometro/cronometro.component';
 import { JuegoAhorcadoComponent } from './menu-docente/juego-ahorcado/juego-ahorcado.component';
-import { AhorcadoFieldComponent } from './menu-estudiante/juegos/ahorcado-field/ahorcado-field.component' 
+import { AhorcadoFieldComponent } from './menu-estudiante/juegos/ahorcado-field/ahorcado-field.component';
+import { JugarMemoriaComponent } from './menu-estudiante/juegos/jugar-memoria/jugar-memoria.component';
+import { MemoriaCardComponent } from './menu-estudiante/juegos/memoria-card/memoria-card.component';
+import { JuegoMemoriaComponent } from './menu-docente/juego-memoria/juego-memoria.component';
+import { ParCardComponent } from './menu-docente/juego-memoria/par-card/par-card.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +50,10 @@ import { AhorcadoFieldComponent } from './menu-estudiante/juegos/ahorcado-field/
     CronometroComponent,
     JuegoAhorcadoComponent,
     AhorcadoFieldComponent,
+    JugarMemoriaComponent,
+    MemoriaCardComponent,
+    JuegoMemoriaComponent,
+    ParCardComponent,
     
   ],
   imports: [

@@ -10,6 +10,8 @@ import { JuegoPerfilComponent } from './menu-estudiante/juego-perfil/juego-perfi
 import { JugarOrdenaPalabraComponent } from './menu-estudiante/juegos/jugar-ordena-palabra/jugar-ordena-palabra.component';
 import { JuegoAhorcadoComponent } from './menu-docente/juego-ahorcado/juego-ahorcado.component';
 import { JugarAhorcadoComponent } from './menu-estudiante/juegos/jugar-ahorcado/jugar-ahorcado.component';
+import { JuegoMemoriaComponent } from './menu-docente/juego-memoria/juego-memoria.component';
+import { JugarMemoriaComponent } from './menu-estudiante/juegos/jugar-memoria/jugar-memoria.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login' },
@@ -21,9 +23,14 @@ const routes: Routes = [
       {
         path: 'crear-ordena-palabra',
         component: OrdenaPalabraPageComponent,
-      },      {
+      },
+      {
         path: 'crear-ahorcado',
         component: JuegoAhorcadoComponent,
+      },
+      {
+        path: 'crear-memoria',
+        component: JuegoMemoriaComponent,
       },
     ],
   },
@@ -46,6 +53,10 @@ const routes: Routes = [
       {
         path: 'jugar-ahorcado/:id',
         component: JugarAhorcadoComponent,
+      },
+      {
+        path: 'jugar-memoria/:id',
+        component: JugarMemoriaComponent,
       },
     ],
   },

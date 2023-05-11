@@ -1,0 +1,11 @@
+<div class="card-container" [ngStyle]="{'transform': card.styleExp}" (click)="voltear()">
+    <div class="img-container" *ngIf="!card.volteado">
+        <img src="../../../../assets/img/descarga.png">
+    </div>
+
+    <div class="flip-card-back" *ngIf="card.volteado">{{card.contenido}}</div>
+</div>
+
+
+
+

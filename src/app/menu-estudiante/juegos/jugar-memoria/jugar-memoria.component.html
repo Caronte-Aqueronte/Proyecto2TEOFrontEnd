@@ -1,0 +1,13 @@
+<div class="container" *ngIf="datosJuego">
+    <div class="title-button-container">
+        <h2>{{datosJuego.nombre}}</h2>
+        <app-cronometro (salida)="setCronometro($event)"></app-cronometro>
+    </div>
+
+
+    <div class="cards-container">
+        <app-memoria-card *ngFor="let card of parejas, let i = index " [card]="card" [id]="card.idPareja"
+            (notificador)="detectarFlip($event, i)"></app-memoria-card>
+    </div>
+
+</div>

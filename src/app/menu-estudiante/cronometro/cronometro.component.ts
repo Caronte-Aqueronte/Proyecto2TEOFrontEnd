@@ -1,4 +1,4 @@
-import { AfterContentInit, Component, EventEmitter, OnInit, Output , OnDestroy} from '@angular/core';
+import { AfterContentInit, Component, EventEmitter, Output , OnDestroy} from '@angular/core';
 
 @Component({
   selector: 'app-cronometro',

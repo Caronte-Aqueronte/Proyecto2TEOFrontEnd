@@ -96,6 +96,9 @@ export class JuegoPerfilComponent {
       case 'Ahorcado':
         this.router.navigate([`/menu-estudiante/jugar-ahorcado/${this.id}`]);
         break;
+      case 'Memoria':
+        this.router.navigate([`/menu-estudiante/jugar-memoria/${this.id}`]);
+        break;
     }
   }
 
