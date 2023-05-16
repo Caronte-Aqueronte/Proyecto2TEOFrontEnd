@@ -7,8 +7,8 @@
     min-width: 100%;
     font-family: 'Roboto';
     background: #4568DC;
-    background: -webkit-linear-gradient(to right, #43d6a5, #4568DC);
-    background: linear-gradient(to right, #43d6a5, #4568DC);
+    background: -webkit-linear-gradient(to right, #e07bc2, #4568DC);
+    background: linear-gradient(to right, #e07bc2, #4568DC);
     padding-top: 30px;
     display: flex;
     flex-direction: column;
@@ -124,8 +124,8 @@ h1 {
 button {
     font-family: 'roboto';
     background: #4568DC;
-    background: -webkit-linear-gradient(to right, #43d6a5, #4568DC);
-    background: linear-gradient(to right, #43d6a5, #4568DC);
+    background: -webkit-linear-gradient(to right, #e07bc2, #4568DC);
+    background: linear-gradient(to right, #e07bc2, #4568DC);
     border: none;
     display: block;
     width: 80%;

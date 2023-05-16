@@ -7,8 +7,8 @@
     min-width: 100%;
     font-family: 'Roboto';
     background: #4568DC;
-    background: -webkit-linear-gradient(to right, #43d6a5, #4568DC);
-    background: linear-gradient(to right, #43d6a5, #4568DC);
+    background: -webkit-linear-gradient(to right, #8ae76d, #4568DC);
+    background: linear-gradient(to right, #8ae76d, #4568DC);
     padding-top: 30px;
     display: flex;
     flex-direction: column;
@@ -101,7 +101,7 @@ h1 {
     padding-bottom: 6px;
     font-weight: 700;
     border-width: 3px;
-    border-image: linear-gradient(to right, #116399, #38caef);
+    border-image: linear-gradient(to right, #8ae76d, #4568DC);
     border-image-slice: 1;
 }
 
@@ -124,8 +124,8 @@ h1 {
 button {
     font-family: 'roboto';
     background: #4568DC;
-    background: -webkit-linear-gradient(to right, #43d6a5, #4568DC);
-    background: linear-gradient(to right, #43d6a5, #4568DC);
+    background: -webkit-linear-gradient(to right, #8ae76d, #4568DC);
+    background: linear-gradient(to right, #8ae76d, #4568DC);
     border: none;
     display: block;
     width: 80%;
