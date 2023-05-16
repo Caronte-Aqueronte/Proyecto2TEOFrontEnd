@@ -61,7 +61,7 @@ span {
 }
 
 .input-container input:focus {
-    border: 1px solid rgb(236 72 153);
+    border: 1px solid rgb(87, 35, 100);
 }
 
 .invite-btn {
@@ -72,7 +72,7 @@ span {
     bottom: 4px;
     z-index: 10;
     border-radius: 4px;
-    background-color: rgb(236 72 153);
+    background-color: rgb(87, 35, 100);
     color: #fff;
     padding-top: .25rem;
     padding-bottom: .25rem;
@@ -80,7 +80,7 @@ span {
     padding-right: 0.5rem;
     text-align: center;
     vertical-align: middle;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 600;
     text-transform: uppercase;
     border: none;
@@ -112,11 +112,11 @@ span {
     border: none;
     font-size: 13px;
     font-weight: bold;
-    color:  rgb(236 72 153);
+    color:  rgb(87, 35, 100);
 }
 
 #clip {
-    --color:  rgb(236 72 153);
+    --color:  rgb(87, 35, 100);
     position: absolute;
     top: 0;
     overflow: hidden;
@@ -129,7 +129,7 @@ span {
 .arrow {
     position: absolute;
     transition: 0.2s;
-    background-color:  rgb(236 72 153);
+    background-color:  rgb(87, 35, 100);
     top: 35%;
     width: 11%;
     height: 30%;
@@ -161,8 +161,8 @@ span {
     position: absolute;
     width: 4em;
     height: 4em;
-    background-color:  rgb(236 72 153);
-    box-shadow: inset 1px 1px 8px  rgb(236 72 153);
+    background-color:  rgb(87, 35, 100);
+    box-shadow: inset 1px 1px 8px  rgb(87, 35, 100);
     transform: scale(1) rotate(45deg);
     transition: 0.2s;
 }
@@ -218,7 +218,7 @@ span {
 
 @keyframes changeColor8 {
     from {
-        background-color:  rgb(236 72 153);
+        background-color:  rgb(87, 35, 100);
     }
 
     to {
