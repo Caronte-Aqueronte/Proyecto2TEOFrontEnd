@@ -30,6 +30,9 @@ import { JugarMemoriaComponent } from './menu-estudiante/juegos/jugar-memoria/ju
 import { MemoriaCardComponent } from './menu-estudiante/juegos/memoria-card/memoria-card.component';
 import { JuegoMemoriaComponent } from './menu-docente/juego-memoria/juego-memoria.component';
 import { ParCardComponent } from './menu-docente/juego-memoria/par-card/par-card.component';
+import { JugarQuizComponent } from './menu-estudiante/juegos/jugar-quiz/jugar-quiz.component';
+import { JuegoQuizComponent } from './menu-docente/juego-quiz/juego-quiz.component';
+import { PreguntaCardComponent } from './menu-docente/juego-quiz/pregunta-card/pregunta-card.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +57,9 @@ import { ParCardComponent } from './menu-docente/juego-memoria/par-card/par-card
     MemoriaCardComponent,
     JuegoMemoriaComponent,
     ParCardComponent,
+    JugarQuizComponent,
+    JuegoQuizComponent,
+    PreguntaCardComponent,
     
   ],
   imports: [

@@ -1,0 +1,41 @@
+<div class="card mb-3" style="max-width: 540px">
+  <div class="row g-0">
+    <div
+      class="col-md-4"
+      style="display: flex; justify-content: center; align-items: center"
+    >
+      <img
+        src="../../../../assets/img/quiz.png"
+        class="img-fluid rounded-start"
+        alt="..."
+      />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Pregunta:</h5>
+        <p class="card-text">
+          {{pregunta.pregunta}}
+        </p>
+        <h5 class="card-title">Opcion 1:</h5>
+        <p class="card-text">
+          {{pregunta.opcion1}}
+        </p>
+        <h5 class="card-title">Opcion 2:</h5>
+        <p class="card-text">
+          {{pregunta.opcion2}}
+        </p>
+        <h5 class="card-title">Opcion 3:</h5>
+        <p class="card-text">
+          {{pregunta.opcion3}}
+        </p>
+        <h5 class="card-title">Respuesta Correcta:</h5>
+        <p class="card-text">
+          {{pregunta.respuestaCorrecta}}
+        </p>
+        <p class="card-text">
+          <button (click)="eliminar()">Borrar</button>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

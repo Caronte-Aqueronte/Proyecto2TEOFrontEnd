@@ -1,0 +1,142 @@
+:root {
+    --colorTextos: #49454567;
+}
+
+.general-container {
+    min-height: 100%;
+    min-width: 100%;
+    font-family: 'Roboto';
+    background: #4568DC;
+    background: -webkit-linear-gradient(to right, #43d6a5, #4568DC);
+    background: linear-gradient(to right, #43d6a5, #4568DC);
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.preguntas-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+}
+
+.form2 {
+    background: #fff;
+    padding: 40px 0;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.form {
+    width: 100%;
+    margin: auto;
+}
+
+.form2 .form__group  {
+    position: relative;
+    margin: 30px;
+}
+
+.form__group {
+    position: relative;
+    padding: 20px 0 0;
+    width: 100%;
+    max-width: 180px;
+}
+
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 17px;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:placeholder-shown~.form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #9b9b9b;
+    pointer-events: none;
+}
+
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #116399, #38caef);
+    border-image-slice: 1;
+}
+
+.form__field:focus~.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #38caef;
+    font-weight: 700;
+}
+
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+    box-shadow: none;
+}
+
+button {
+    font-family: 'roboto';
+    background: #4568DC;
+    background: -webkit-linear-gradient(to right, #43d6a5, #4568DC);
+    background: linear-gradient(to right, #43d6a5, #4568DC);
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: #fff;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+button:disabled{
+    background: #4568dc57;
+}

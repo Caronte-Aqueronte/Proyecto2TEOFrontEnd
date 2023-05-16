@@ -99,6 +99,9 @@ export class JuegoPerfilComponent {
       case 'Memoria':
         this.router.navigate([`/menu-estudiante/jugar-memoria/${this.id}`]);
         break;
+      case 'Quiz':
+        this.router.navigate([`/menu-estudiante/jugar-quiz/${this.id}`]);
+        break;
     }
   }
 

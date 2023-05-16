@@ -1,0 +1,50 @@
+<div class="puntaje">
+  <div class="title-button-container">
+    <app-cronometro (salida)="setCronometro($event)"></app-cronometro>
+  </div>
+  <div *ngIf="juegoFinalizado">
+    <h2>Puntaje: {{ puntaje }} / {{ totalPreguntas }}</h2>
+  </div>
+
+  <div *ngIf="preguntas.length > 0" class="preguntas-container">
+    <div class="pregunta">
+      <h3>Pregunta {{ preguntaActual + 1 }} de {{ totalPreguntas }}</h3>
+      <p>{{ preguntas[preguntaActual]?.pregunta }}</p>
+      <ul>
+        <li
+          *ngFor="
+            let opcion of preguntas[preguntaActual]?.opciones;
+            let i = index
+          "
+        >
+          <label>
+            <input
+              type="radio"
+              name="opcion"
+              [checked]="preguntas[preguntaActual]?.respuestaUsuario === i"
+              (change)="selectOption(i)"
+            />
+            {{ opcion }}
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <div class="botones">
+      <button (click)="anteriorPregunta()" [disabled]="preguntaActual === 0">
+        Anterior
+      </button>
+      <button
+        (click)="siguientePregunta()"
+        [disabled]="preguntaActual === totalPreguntas - 1"
+      >
+        Siguiente
+      </button>
+      <button (click)="finalizarJuego()">Finalizar</button>
+    </div>
+  </div>
+
+  <div *ngIf="preguntas.length === 0" class="no-preguntas">
+    <p>No hay preguntas disponibles.</p>
+  </div>
+</div>

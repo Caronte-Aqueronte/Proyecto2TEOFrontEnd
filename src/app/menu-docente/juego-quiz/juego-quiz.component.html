@@ -1,0 +1,83 @@
+<div class="general-container">
+  <div class="body">
+    <form
+      form
+      [formGroup]="formIngresarPregunta"
+      (submit)="ingresarPregunta()"
+      class="form2"
+      id="form"
+    >
+      <div class="form">
+        <h1>Crear Quiz</h1>
+        <div class="form__group field">
+          <input
+            type="input"
+            class="form__field"
+            placeholder="Name"
+            formControlName="nombreJuego"
+          />
+          <label for="name" class="form__label">Nombre del juego</label>
+        </div>
+        <div class="form__group field">
+          <input
+            type="input"
+            class="form__field"
+            placeholder="Name"
+            formControlName="pregunta"
+          />
+          <label for="name" class="form__label">Pregunta</label>
+        </div>
+        <div class="form__group field">
+          <input
+            type="input"
+            class="form__field"
+            placeholder="Name"
+            formControlName="opcion1"
+          />
+          <label for="name" class="form__label">Opcion 1</label>
+        </div>
+        <div class="form__group field">
+          <input
+            type="input"
+            class="form__field"
+            placeholder="Name"
+            formControlName="opcion2"
+          />
+          <label for="name" class="form__label">Opcion 2</label>
+        </div>
+        <div class="form__group field">
+          <input
+            type="input"
+            class="form__field"
+            placeholder="Name"
+            formControlName="opcion3"
+          />
+          <label for="name" class="form__label">Opcion 3</label>
+        </div>
+        <div class="form__group field">
+          <input
+            type="input"
+            class="form__field"
+            placeholder="Name"
+            formControlName="respuestaCorrecta"
+          />
+          <label for="name" class="form__label">Respuesta Correcta</label>
+        </div>
+        <button [disabled]="formIngresarPregunta.invalid">
+          Ingresar Pregunta
+        </button>
+        <button (click)="crearJuegoQuiz()" type="button">Crear Quiz</button>
+      </div>
+    </form>
+  </div>
+  <!---Agrego componente de pareja container -->
+  <div class="preguntas-container">
+    <app-pregunta-card
+      *ngFor="let pregunta of preguntasQuiz; let i = index"
+      [idPreguntas]="pregunta.idPreguntas"
+      [pregunta]="pregunta"
+      (notificador)="eliminarPregunta(i, $event)"
+    >
+    </app-pregunta-card>
+  </div>
+</div>
