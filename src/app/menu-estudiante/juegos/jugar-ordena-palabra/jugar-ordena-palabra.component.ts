@@ -79,7 +79,7 @@ export class JugarOrdenaPalabraComponent {
 
         this.router.navigate([
           //navegamos al perfil del juego para que se puedan visualizar de nuevo los comentarios y records
-          `menu-estudiante/juegos-perfil/${this.id}`,
+          `menu-estudiante/juegos-perfil/${this.id}/true`,
         ]);
       });
   }

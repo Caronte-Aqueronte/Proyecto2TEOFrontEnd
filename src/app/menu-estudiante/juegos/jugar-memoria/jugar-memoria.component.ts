@@ -94,7 +94,7 @@ export class JugarMemoriaComponent {
       //redirigimos a la pantalla de inicio
       this.router.navigate([
         //navegamos al perfil del juego para que se puedan visualizar de nuevo los comentarios y records
-        `menu-estudiante/juegos-perfil/${this.idJuego}`,
+        `menu-estudiante/juegos-perfil/${this.idJuego}/true`,
       ]);
     });
   }
