@@ -20,11 +20,11 @@ export class JugarQuizComponent {
   //numero de segundos que envia el cronometro
   public cronometro: number = 0;
   //puntaje 
-  puntaje: number = 0;
+  public puntaje: number = 0;
   //Contador para el total de preguntas de un quiz
-  totalPreguntas!: number;
+  public totalPreguntas!: number;
   //Para finalizar el juego, si inicializa en false
-  juegoFinalizado: boolean = false;
+  public juegoFinalizado: boolean = false;
 
 
   //obtengo las preguntas segun el id del juego 
@@ -110,7 +110,7 @@ export class JugarQuizComponent {
     });
     this.quizService.guardarPunteoQuiz(body).subscribe((r: any) => {
       // Mostrar el puntaje al usuario
-      alert(`Tu puntaje es: ${puntajeTotal}`);
+      alert(`Tu puntaje es: ${puntajeTotal} de ${this.preguntas.length}`);
       this.router.navigate([
         //navegamos al perfil del juego para que se puedan visualizar de nuevo los comentarios y records
         `menu-estudiante/juegos-perfil/${this.idJuego}`,
