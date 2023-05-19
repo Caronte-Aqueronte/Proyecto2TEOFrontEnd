@@ -12,4 +12,12 @@ export class PunteoService {
   public traerRankingDeUnJuego(id: any): Observable<any> {
     return this.http.get(this.url + `/traerRankingDeUnJuego?id=${id}`);
   }
+
+  public traerHistorialDeJuego(usuario: any): Observable<any> {
+    return this.http.get(this.url + `/traerHistorialDeJuego?usuario=${usuario}`);
+  }
+
+  public traerMedallasDeUsuario(usuario: any): Observable<any> {
+    return this.http.get(this.url + `/traerMedallasDeUsuario?usuario=${usuario}`);
+  }
 }

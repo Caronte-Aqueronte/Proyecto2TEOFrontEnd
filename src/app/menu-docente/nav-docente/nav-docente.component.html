@@ -1,15 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand" routerLink=""></a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -17,26 +10,20 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
         <div class="dropdown">
-          <button
-            class="btn btn-primary"
-            type="button"
-            id="MenuJuegos"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
+          <button class="btn btn-primary" type="button" id="MenuJuegos" data-bs-toggle="dropdown" aria-expanded="false">
             Crear Juego
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 
             <li>
               <a class="dropdown-item juego-ahorcado" [routerLink]="['crear-ahorcado']">
-                <img src="../../../assets/img/juego-del-ahorcado.png" alt="Icono Juego Ahorcado">
+                <img src="../../../assets/img/medalla1.png" alt="Icono Juego Ahorcado">
                 Juego Ahorcado
               </a>
             </li>
             <li>
               <a class="dropdown-item juego-ahorcado" [routerLink]="['crear-ordena-palabra']">
-                <img src="../../../assets/img/ordenaPalabra.png" alt="Icono Juego Ordena Palabra">
+                <img src="../../../assets/img/medalla3.png" alt="Icono Juego Ordena Palabra">
                 Juego Ordena Palabras
               </a>
             </li>
@@ -48,16 +35,13 @@
             </li>
             <li>
               <a class="dropdown-item juego-ahorcado" [routerLink]="['crear-quiz']">
-                <img src="../../../assets/img/quizz.png" alt="Icono Juego Quiz">
+                <img src="../../../assets/img/medalla4.png" alt="Icono Juego Quiz">
                 Juego Quiz
               </a>
             </li>
           </ul>
         </div>
 
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/Rankings">Ver Rankings</a>
-        </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/">Cerrar Sesion</a>
         </li>
