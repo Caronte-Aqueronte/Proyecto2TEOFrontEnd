@@ -48,7 +48,7 @@ export class JuegoPerfilComponent implements OnInit {
   private ocultarBoton(): void {
     let banderaParam = this.rutaActiva.snapshot.params['estado'];
 
-    if (banderaParam == 'true') {
+    if (banderaParam && banderaParam == 'true') {
       this.xx = true;
     } else {
       this.xx = false;

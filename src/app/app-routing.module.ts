@@ -45,7 +45,7 @@ const routes: Routes = [
         component: JuegosCreadosComponent,
       },
       {
-        path: 'juegos-perfil/:id/:estado',
+        path: 'juegos-perfil/:id',
         component: JuegoPerfilComponent,
       },
     ],
