@@ -1,0 +1,17 @@
+.table-container {
+    margin-top: 70px;
+    width: 100%;
+}
+
+.tabla {
+    width: 100%;
+}
+
+
+.medallas-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
