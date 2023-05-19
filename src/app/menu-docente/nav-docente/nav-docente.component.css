@@ -1,11 +1,10 @@
 li {
-    display: flex;
-    align-items: center;
-  }
-  
-  li img {
-    width: 35px;
-    height: 35px;
-    margin-right: 5px;
-  }
-  
+  display: flex;
+  align-items: center;
+}
+
+li img {
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+}

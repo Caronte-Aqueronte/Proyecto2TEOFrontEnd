@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
@@ -16,7 +16,8 @@ export class JuegoPerfilComponent implements OnInit {
   public usuario: any
   public juego: any;
   public comentarios: any;
-  public bandera: any = true;
+
+  xx = false;
 
   public formComentario: FormGroup; //formulario de comentarios
 
@@ -24,7 +25,7 @@ export class JuegoPerfilComponent implements OnInit {
   dataSource = [];
 
   ngOnInit(): void {
-    this.bandera = this.rutaActiva.snapshot.params['estado'];
+    this.ocultarBoton();
   }
   constructor(
     private rutaActiva: ActivatedRoute,
@@ -36,8 +37,6 @@ export class JuegoPerfilComponent implements OnInit {
     private formBuilder: FormBuilder
   ) {
     this.id = this.rutaActiva.snapshot.params['id']; //obtenemos el id del juego ha mostrar
-    this.bandera = this.rutaActiva.snapshot.params['estado'];
-    console.log(this.bandera);
     this.traerJuegoPorId();
     this.traerComentariosDeJuego();
     this.traerRankingDeUnJuego();
@@ -47,6 +46,16 @@ export class JuegoPerfilComponent implements OnInit {
     });
   }
 
+  private ocultarBoton(): void {
+    let banderaParam = this.rutaActiva.snapshot.params['estado'];
+
+    if (banderaParam == 'true') {
+      this.xx = true;
+    } else {
+      this.xx = false;
+    }
+    console.log(this.xx);
+  }
   public traerJuegoPorId(): void {
     //mandamos a traer el tipo del juego por el id
     this.juegoService.buscarJuegoPorId(this.id).subscribe((r) => {

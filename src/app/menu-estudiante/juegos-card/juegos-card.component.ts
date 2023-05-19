@@ -8,12 +8,14 @@ import { Router } from '@angular/router';
 })
 export class JuegosCardComponent {
   @Input() juego: any;
-
-  constructor(private router: Router) { }
+  @Input() estado: any;
+  constructor(private router: Router) {}
 
   public aJuegoPerfil(): void {
     this.router.navigate([]);
-    this.router.navigate([`menu-estudiante/juegos-perfil/${this.juego._id}/true`]);
+    this.router.navigate([
+      `menu-estudiante/juegos-perfil/${this.juego._id}/${this.estado}`,
+    ]);
   }
 
   getImagenJuego(tipoJuego: string): string {
@@ -34,5 +36,4 @@ export class JuegosCardComponent {
 
     return imagen;
   }
-
 }
