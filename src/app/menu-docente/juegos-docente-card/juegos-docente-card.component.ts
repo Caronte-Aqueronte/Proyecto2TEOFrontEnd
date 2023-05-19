@@ -2,18 +2,18 @@ import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-juegos-card',
-  templateUrl: './juegos-card.component.html',
-  styleUrls: ['./juegos-card.component.css'],
+  selector: 'app-juegos-docente-card',
+  templateUrl: './juegos-docente-card.component.html',
+  styleUrls: ['./juegos-docente-card.component.css']
 })
-export class JuegosCardComponent {
+export class JuegosDocenteCardComponent {
   @Input() juego: any;
 
   constructor(private router: Router) { }
 
   public aJuegoPerfil(): void {
     this.router.navigate([]);
-    this.router.navigate([`menu-estudiante/juegos-perfil/${this.juego._id}/true`]);
+    this.router.navigate([`menu-estudiante/juegos-perfil/${this.juego._id}`]);
   }
 
   getImagenJuego(tipoJuego: string): string {
@@ -34,5 +34,4 @@ export class JuegosCardComponent {
 
     return imagen;
   }
-
 }

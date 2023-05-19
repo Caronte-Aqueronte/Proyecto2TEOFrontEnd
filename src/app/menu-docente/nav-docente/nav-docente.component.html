@@ -1,41 +1,80 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand" routerLink=""></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
         <div class="dropdown">
-          <button class="btn btn-primary" type="button" id="MenuJuegos" data-bs-toggle="dropdown" aria-expanded="false">
+          <li
+            class="btn btn-primary"
+            type="button"
+            id="MenuJuegos"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="../../../assets/img/crear.png"
+              alt="Icono Juego Ahorcado"
+            />
             Crear Juego
-          </button>
+        </li>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-
             <li>
-              <a class="dropdown-item juego-ahorcado" [routerLink]="['crear-ahorcado']">
-                <img src="../../../assets/img/medalla1.png" alt="Icono Juego Ahorcado">
+              <a
+                class="dropdown-item juego-ahorcado"
+                [routerLink]="['crear-ahorcado']"
+              >
+                <img
+                  src="../../../assets/img/medalla1.png"
+                  alt="Icono Juego Ahorcado"
+                />
                 Juego Ahorcado
               </a>
             </li>
             <li>
-              <a class="dropdown-item juego-ahorcado" [routerLink]="['crear-ordena-palabra']">
-                <img src="../../../assets/img/medalla3.png" alt="Icono Juego Ordena Palabra">
+              <a
+                class="dropdown-item juego-ahorcado"
+                [routerLink]="['crear-ordena-palabra']"
+              >
+                <img
+                  src="../../../assets/img/medalla3.png"
+                  alt="Icono Juego Ordena Palabra"
+                />
                 Juego Ordena Palabras
               </a>
             </li>
             <li>
-              <a class="dropdown-item juego-ahorcado" [routerLink]="['crear-memoria']">
-                <img src="../../../assets/img/memoria.png" alt="Icono Juego Memoria">
+              <a
+                class="dropdown-item juego-ahorcado"
+                [routerLink]="['crear-memoria']"
+              >
+                <img
+                  src="../../../assets/img/memoria.png"
+                  alt="Icono Juego Memoria"
+                />
                 Juego de Memoria
               </a>
             </li>
             <li>
-              <a class="dropdown-item juego-ahorcado" [routerLink]="['crear-quiz']">
-                <img src="../../../assets/img/medalla4.png" alt="Icono Juego Quiz">
+              <a
+                class="dropdown-item juego-ahorcado"
+                [routerLink]="['crear-quiz']"
+              >
+                <img
+                  src="../../../assets/img/medalla4.png"
+                  alt="Icono Juego Quiz"
+                />
                 Juego Quiz
               </a>
             </li>
@@ -43,7 +82,23 @@
         </div>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/">Cerrar Sesion</a>
+          <a class="nav-link" [routerLink]="['juegosCreados']">
+            <img
+              src="../../../assets/img/rompecabezas.png"
+              alt="Icono Cerrar Sesion"
+            />
+            Mis Juegos
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">
+            <img
+              src="../../../assets/img/logout.png"
+              alt="Icono Cerrar Sesion"
+            />
+            Cerrar Sesion
+          </a>
         </li>
       </ul>
     </div>

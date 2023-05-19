@@ -15,6 +15,7 @@ import { JugarMemoriaComponent } from './menu-estudiante/juegos/jugar-memoria/ju
 import { JuegoQuizComponent } from './menu-docente/juego-quiz/juego-quiz.component';
 import { JugarQuizComponent } from './menu-estudiante/juegos/jugar-quiz/jugar-quiz.component';
 import { MedallasPageComponent } from './menu-estudiante/medallas-page/medallas-page.component';
+import { JuegosCreadosComponent } from './menu-docente/juegos-creados/juegos-creados.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login' },
@@ -39,6 +40,14 @@ const routes: Routes = [
         path: 'crear-quiz',
         component: JuegoQuizComponent,
       },
+      {
+        path: 'juegosCreados',
+        component: JuegosCreadosComponent,
+      },
+      {
+        path: 'juegos-perfil/:id/:estado',
+        component: JuegoPerfilComponent,
+      },
     ],
   },
   {
@@ -50,7 +59,7 @@ const routes: Routes = [
         component: JuegosContainerComponent,
       },
       {
-        path: 'juegos-perfil/:id',
+        path: 'juegos-perfil/:id/:estado',
         component: JuegoPerfilComponent,
       },
       {

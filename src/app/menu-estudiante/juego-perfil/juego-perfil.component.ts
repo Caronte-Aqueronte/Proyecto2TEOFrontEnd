@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
@@ -11,16 +11,20 @@ import { PunteoService } from 'src/app/servicios/punteo.service';
   templateUrl: './juego-perfil.component.html',
   styleUrls: ['./juego-perfil.component.css'],
 })
-export class JuegoPerfilComponent {
+export class JuegoPerfilComponent implements OnInit {
   public id: any;
   public juego: any;
   public comentarios: any;
+  public bandera: any = true;
 
   public formComentario: FormGroup; //formulario de comentarios
 
   displayedColumns: string[] = ['position', 'name', 'tiempo', 'weight'];
   dataSource = [];
 
+  ngOnInit(): void {
+    this.bandera = this.rutaActiva.snapshot.params['estado'];
+  }
   constructor(
     private rutaActiva: ActivatedRoute,
     private juegoService: JuegoServiceService,
@@ -31,6 +35,8 @@ export class JuegoPerfilComponent {
     private formBuilder: FormBuilder
   ) {
     this.id = this.rutaActiva.snapshot.params['id']; //obtenemos el id del juego ha mostrar
+    this.bandera = this.rutaActiva.snapshot.params['estado'];
+    console.log(this.bandera);
     this.traerJuegoPorId();
     this.traerComentariosDeJuego();
     this.traerRankingDeUnJuego();
