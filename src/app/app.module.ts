@@ -33,6 +33,7 @@ import { ParCardComponent } from './menu-docente/juego-memoria/par-card/par-card
 import { JugarQuizComponent } from './menu-estudiante/juegos/jugar-quiz/jugar-quiz.component';
 import { JuegoQuizComponent } from './menu-docente/juego-quiz/juego-quiz.component';
 import { PreguntaCardComponent } from './menu-docente/juego-quiz/pregunta-card/pregunta-card.component';
+import { MedallasPageComponent } from './menu-estudiante/medallas-page/medallas-page.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { PreguntaCardComponent } from './menu-docente/juego-quiz/pregunta-card/p
     JugarQuizComponent,
     JuegoQuizComponent,
     PreguntaCardComponent,
+    MedallasPageComponent,
     
   ],
   imports: [
