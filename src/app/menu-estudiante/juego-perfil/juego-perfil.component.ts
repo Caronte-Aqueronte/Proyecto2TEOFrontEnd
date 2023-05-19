@@ -13,6 +13,7 @@ import { PunteoService } from 'src/app/servicios/punteo.service';
 })
 export class JuegoPerfilComponent implements OnInit {
   public id: any;
+  public usuario: any
   public juego: any;
   public comentarios: any;
   public bandera: any = true;

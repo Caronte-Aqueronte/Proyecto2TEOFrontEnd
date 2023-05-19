@@ -19,4 +19,10 @@ export class JuegoServiceService {
       this.url + `/buscarJuegoPorId?id=${id}`
     );
   }
+
+  public MostrarJuegosporUsuario(usuario: any): Observable<any> {
+    return this.http.get<Observable<any>>(
+      this.url + `/mostrarJuegosDeDocente?usuario=${usuario}`
+    );
+  }
 }
