@@ -6,6 +6,12 @@
     cursor: pointer;
 }
 
+.imagen-juego {
+    width: 100px;
+    height: 100px;
+}
+
+
 .card-inner {
     width: 100%;
     height: inherit;
@@ -19,10 +25,11 @@
     align-items: center;
 }
 
-p{
+p {
     font-weight: bold;
     font-family: 'Roboto';
 }
+
 .card:hover {
     transform: scale(1.04) rotate(1deg);
 }
@@ -30,7 +37,7 @@ p{
 .circle {
     width: 100px;
     height: 100px;
-    background: radial-gradient(#b0e633, #53ef7d);
+    background: radial-gradient(#9e33e6, #a953ef);
     border-radius: 50%;
     position: absolute;
     animation: move-up6 2s ease-in infinite alternate-reverse;

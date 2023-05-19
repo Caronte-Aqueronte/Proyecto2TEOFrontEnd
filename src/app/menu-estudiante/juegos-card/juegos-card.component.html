@@ -2,9 +2,11 @@
     <div class="circle"></div>
     <div class="circle"></div>
     <div class="card-inner">
-        <p>{{juego._id}}</p>
-        <p>{{juego.nombre}}</p>
-        <h2>Tipo de juego</h2>
-        <p>{{juego.tipo}}</p>
+      <img [src]="getImagenJuego(juego.tipo)" alt="Imagen del juego" class="imagen-juego">
+      <p>{{juego._id}}</p>
+      <p>{{juego.nombre}}</p>
+      <h2>Tipo de juego</h2>
+      <p>{{juego.tipo}}</p>
     </div>
-</div>
+  </div>
+  
