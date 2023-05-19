@@ -41,7 +41,7 @@ export class JuegosCardComponent {
     } else if (tipoJuego === 'Memoria') {
       imagen = '../../../assets/img/memoria.png';
     } else if (tipoJuego === 'Ordena palabra') {
-      imagen = '../../../assets/img/ordenaPalabra.png';
+      imagen = '../../../assets/img/medalla3.png';
     } else {
       imagen = ''; // Ruta de imagen por defecto o en caso de tipo de juego desconocido
     }
