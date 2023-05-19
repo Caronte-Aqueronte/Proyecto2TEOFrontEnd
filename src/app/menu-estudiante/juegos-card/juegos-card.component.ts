@@ -35,9 +35,9 @@ export class JuegosCardComponent {
 
     // Asigna la ruta de la imagen según el tipo de juego
     if (tipoJuego === 'Quiz') {
-      imagen = '../../../assets/img/quizz.png';
+      imagen = '../../../assets/img/medalla4.png';
     } else if (tipoJuego === 'Ahorcado') {
-      imagen = '../../../assets/img/juego-del-ahorcado.png';
+      imagen = '../../../assets/img/medalla1.png';
     } else if (tipoJuego === 'Memoria') {
       imagen = '../../../assets/img/memoria.png';
     } else if (tipoJuego === 'Ordena palabra') {
