@@ -13,7 +13,7 @@ export class JuegosDocenteCardComponent {
 
   public aJuegoPerfil(): void {
     this.router.navigate([]);
-    this.router.navigate([`menu-estudiante/juegos-perfil/${this.juego._id}`]);
+    this.router.navigate([`menu-docente/juegos-perfil/${this.juego._id}`]);
   }
 
   getImagenJuego(tipoJuego: string): string {

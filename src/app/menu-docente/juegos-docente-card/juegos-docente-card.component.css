@@ -37,7 +37,7 @@ p {
 .circle {
     width: 100px;
     height: 100px;
-    background: radial-gradient(#9e33e6, #a953ef);
+    background: radial-gradient(#3f33e6, #5384ef);
     border-radius: 50%;
     position: absolute;
     animation: move-up6 2s ease-in infinite alternate-reverse;

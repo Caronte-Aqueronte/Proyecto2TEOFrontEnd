@@ -15,18 +15,11 @@ export class JuegosCreadosComponent {
     this.cards = [];
     this.usuario = this.cookiesService.get('usuario');
     console.log(this.usuario);
-
     this.traerJuegoPorUsuario();
-    this.mostrarJuegos();
+
   }
 
   ngOnInit(): void { }
-
-  public mostrarJuegos(): void {
-    this.juegoService.mostrarJuegos().subscribe((r) => {
-      this.cards = r;//igualamos el array al array devuelto por el backend
-    });
-  }
 
   public traerJuegoPorUsuario(): void {
     //mandamos a traer el tipo del juego por el id
