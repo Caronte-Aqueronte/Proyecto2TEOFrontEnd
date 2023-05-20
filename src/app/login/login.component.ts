@@ -90,7 +90,7 @@ export class LoginComponent implements OnInit {
         let usuario = this.formLogin.controls['correoElectronico'].value;
         this.cookiesService.set('usuario', usuario);
         if (r.respuesta.rol == 'Profesor') {
-          this.router.navigate(['/menu-docente']);
+          this.router.navigate(['/menu-docente/juegosCreados']);
         } else if (r.respuesta.rol == 'Estudiante') {
           this.router.navigate(['/menu-estudiante/juegos']);
         }
