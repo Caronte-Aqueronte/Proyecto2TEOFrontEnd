@@ -10,9 +10,6 @@
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    box-shadow: -2px 5px 29px 1px rgb(236 72 153);
-    -webkit-box-shadow: -2px 5px 29px 1px rgb(236 72 153);
-    -moz-box-shadow: -2px 5px 29px 1px rgb(236 72 153);
 }
 
 .container {
@@ -74,7 +71,7 @@ span {
     padding-bottom: 6px;
     font-weight: 700;
     border-width: 3px;
-    border-image: linear-gradient(to right, rgb(236 72 153), rgb(255, 192, 224));
+    border-image: linear-gradient(to right, rgb(124 28 124), rgb(255, 192, 224));
     border-image-slice: 1;
 }
 
@@ -84,7 +81,7 @@ span {
     display: block;
     transition: 0.2s;
     font-size: 17px;
-    color: rgb(236 72 153);
+    color: rgb(124 28 124);
     font-weight: 700;
 }
 

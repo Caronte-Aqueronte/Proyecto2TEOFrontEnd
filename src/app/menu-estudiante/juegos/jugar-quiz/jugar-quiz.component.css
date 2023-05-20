@@ -67,7 +67,7 @@ ul {
 
 /* Estilos para los botones */
 button {
-  background-color: #4CAF50;
+  background-color:  rgb(87, 35, 100) ;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -80,7 +80,7 @@ button {
 
 
 button:hover {
-  background-color: #45a049;
+  background-color: rgb(200, 0, 255);
 }
 
 button:disabled {
